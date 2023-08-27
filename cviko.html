@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice file</title>
+  </head>
+  <body>
+    <h1>Practice</h1>
+    <p>answer</p>
+    <script>
+      /*print out even numbers*/
+      function even() {
+        let numbers = [];
+        for (let n = 0; n < 1001; n += 2) {
+          if (n !== 0) {
+            numbers.push(n);
+          }
+        }
+        return numbers;
+      }
+
+      /*length converter*/
+      function convert() {
+        let miles = "";
+        let meters = prompt("How many meters you want to convert?");
+        miles = meters * 0.000621371192;
+        let answer = document.querySelector("p");
+        answer.innerHTML = `${meters} meters is ${miles} miles.`;
+      }
+
+      /*reverse array*/
+      let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      function reversed() {
+        return array.reverse();
+      }
+
+      /*sort array*/
+      let lowest = [2, 3, 1, 4, 5, 2, 1, 8];
+      function highest() {
+        return lowest.sort();
+      }
+
+      /*remove spaces in a string*/
+      str = "    Fucked up    beyond repair   ";
+      const shorter = () => {
+        str = str.replace(/([a-z])([A-Z])/g, "$1 $2");
+        return str.split(/\s+/).join(" ").trim();
+      };
+
+      /*boolean if divisible by 10*/
+      const check = () => {
+        let number = prompt("Pick a number");
+        let answer = document.querySelector("p");
+        if (number % 10 == 0) {
+          answer.innerHTML = `${number} is divisible by 10`;
+          return true;
+        } else {
+          answer.innerHTML = `${number} is not divisible by 10`;
+          return false;
+        }
+      };
+
+      /*return number of vowels in a string*/
+      let string1 = "This is a test string";
+      let sum = 0;
+      const test = ["a", "e", "i", "o", "u", "y"];
+      const vowels = () => {
+        for (let counting of string1)
+          if (test.includes(counting)) {
+            sum++;
+          }
+        return sum;
+      };
+
+      /*filter out negative numbers*/
+      let testArr = [1, -5, 3, -2.4, 6, 7.5];
+      const checking = () => {
+        let result = testArr.filter((word) => word > 0.0);
+        return result;
+      };
+    </script>
+  </body>
+</html>
